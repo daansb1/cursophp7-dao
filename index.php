@@ -2,14 +2,16 @@
 
   require_once("config.php");
 
-  //Carrega um usuário.
-  //$root = new Usuario();
-  //$root->loadbyId(1);
-  //echo $root;
+//Carrega um usuário.
+//$root = new Usuario();
+//$root->loadbyId(1);
+//echo $root;
 
-  //Carrega uma lista de usuários
-  //$lista = Usuario::getList();
-  //echo json_encode($lista);
+
+
+//Carrega uma lista de usuários
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
 //carrega uma lista de usuários buscando pelo login
 //$search = Usuario::search("da");
@@ -20,11 +22,20 @@
 //$usuario->login ("root", "!@#%");
 //echo $usuario;
 
+/*
+// Criamos usuário método insert
+//$aluno = new Usuario ("aluno", "@aluno");
+//$aluno->insert();
+//echo $aluno;
+*/
 
-$aluno = new Usuario ("aluno", "@aluno");
 
+$usuario = new Usuario();
 
-$aluno->insert();
+$usuario->loadById(3);
 
-echo $aluno;
+$usuario->update("professor","%$#@$%");
+
+echo $usuario;
+
 ?>
